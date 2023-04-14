@@ -2,6 +2,7 @@ numpy
 pandas
 matplotlib
 python-time
+time==0.3.0
 joblib
 streamlit==1.20.0
 streamlit-authenticator==0.2.1
@@ -10,6 +11,5 @@ keras==2.10.0
 seaborn
 scikit-learn
 yellowbrick
-hashlib
 opencv-python
 pillow
