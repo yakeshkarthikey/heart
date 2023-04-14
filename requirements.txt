@@ -8,5 +8,4 @@ Pillow==9.4.0
 scikit_learn==1.0.2
 seaborn==0.12.2
 tensorflow==2.11.0
-tensorflow_intel==2.11.0
 yellowbrick==1.5
