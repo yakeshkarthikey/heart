@@ -142,7 +142,7 @@ PyMsgBox==1.0.9
 pyod==1.0.9
 pyparsing==2.4.7
 pyperclip==1.8.2
-pypiwin32==223
+pypiwin32
 pyproject_hooks==1.0.0
 PyRect==0.2.0
 pyrsistent==0.19.3
