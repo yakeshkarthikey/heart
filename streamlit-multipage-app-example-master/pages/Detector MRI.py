@@ -18,7 +18,7 @@ if x:
         st.write("input image")
         # st.image(image)
         img_array = np.array(image) # if you want to pass it to OpenCV
-        img = 'D:/ML and DL based heart disease detection/dataset_image/color_img.jpg'
+        img = 'streamlit-multipage-app-example-master/pages/color_img.jpg'
         imsave(img, img_array)
         # st.image(image, caption="The caption", use_column_width=True)
         # array = np.reshape(img_array, (128, 128))
