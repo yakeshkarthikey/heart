@@ -32,7 +32,7 @@ if x:
         if button:
             with st.spinner('Processing your data...'):
                 time.sleep(5)
-            model = load_model('D:/ML and DL based heart disease detection/model.h5')
+            model = load_model('model.pkl')
             batch_size = 16
             image = imread(img)
             img = Image.fromarray(image)
