@@ -72,7 +72,7 @@ if x:
             # x=np.array((age,sex,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal))
             # x = np.array((1,1,1,1,1,1,1,1,1,1,1,1,1))
             if x:
-                model3 = joblib.load('D:/Py/heart_disease_prediction/model.pkl')
+                model3 = joblib.load('model.pkl')
                 p = model3.predict(np.array((int(age),int(sex),int(cp),int(trestbps),int(chol),int(fbs),int(restecg),int(thalach)
                                             ,int(exang),int(oldpeak),int(slope),int(ca),int(thal))).reshape(1,-1))
                 print("streamlit predictions",p[0])
