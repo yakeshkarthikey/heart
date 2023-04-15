@@ -32,7 +32,7 @@ if x:
         if button:
             with st.spinner('Processing your data...'):
                 time.sleep(5)
-            model = load_model('model.pkl')
+            model = load_model('model.h5')
             batch_size = 16
             image = imread(img)
             img = Image.fromarray(image)
