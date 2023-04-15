@@ -1,5 +1,5 @@
 import streamlit as st
-import cv2
+from skimage.io import imread,imsave
 from keras.models import load_model
 from PIL import Image
 import numpy as np
@@ -19,7 +19,7 @@ if x:
         # st.image(image)
         img_array = np.array(image) # if you want to pass it to OpenCV
         img = 'D:/ML and DL based heart disease detection/dataset_image/color_img.jpg'
-        cv2.imwrite(img, img_array)
+        imsave(img, img_array)
         # st.image(image, caption="The caption", use_column_width=True)
         # array = np.reshape(img_array, (128, 128))
 
@@ -34,7 +34,7 @@ if x:
                 time.sleep(5)
             model = load_model('D:/ML and DL based heart disease detection/model.h5')
             batch_size = 16
-            image = cv2.imread(img)
+            image = imread(img)
             img = Image.fromarray(image)
             img = img.resize((128, 128))
             img = np.array(img)
