@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st 
-import cv2
+from skimage.io import imread,imsave
 from keras.models import load_model
 from PIL import Image
 import numpy as np
