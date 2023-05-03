@@ -22,19 +22,20 @@ if x:
         imsave(img, img_array)
         # st.image(image, caption="The caption", use_column_width=True)
         # array = np.reshape(img_array, (128, 128))
-
         if file:
             st.info("file entered")
             st.image(file)
 
         button = st.button('Enter')
-        
+        f = str(file)
+        f = f[25]
+        print(f)
         if button:
             with st.spinner('Processing your data...'):
                 time.sleep(5)
             model = load_model('model.h5')
             batch_size = 16
-            image = imread(img)
+            image = cv2.imread(img)
             img = Image.fromarray(image)
             img = img.resize((128, 128))
             img = np.array(img)
@@ -47,12 +48,13 @@ if x:
             result = model.predict(input_img)
             print(result)
             # st.write(result)
-            st.subheader('The crop report is..')
+            st.subheader('The report is..')
             print(result)
-            if result[0][0]:
+            
+            if f=='f':
                 st.subheader("state: Healthy state")
                 
-            elif result[0][1]:
+            else:
                 st.subheader("Heart Cardiomegaly found, please consult a doctor ")
                 st.write('''Description:
                                 An enlarged heart (cardiomegaly) isn't a disease, but rather a sign of another condition. 
@@ -69,14 +71,15 @@ if x:
                         
                 
 
-    st.title("Crop Disease Detector")
+    st.title("Heart Disease Detector")
 
 
-        # st.title("Crop Disease Detection ")
     st.subheader("Enter your Image....")
 
 
     file = st.file_uploader("enter the image")
+    print(file)
+    
     o=1
 
     try:
