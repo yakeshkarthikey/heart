@@ -65,7 +65,7 @@ def home():
 def main():
     s = ""
     st.title("Heart Disease Detection")
-    menu = ["Login","SignUp"]
+    menu = ["SignUp","Login"]
     choice = st.sidebar.selectbox("Menu",menu)
 
     
