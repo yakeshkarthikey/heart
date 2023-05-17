@@ -33,21 +33,10 @@ if x:
         if button:
             with st.spinner('Processing your data...'):
                 time.sleep(5)
-            model = load_model('model.h5')
+      
             batch_size = 16
             image = cv2.imread(img)
-            img = Image.fromarray(image)
-            img = img.resize((128, 128))
-            img = np.array(img)
-            input_img = np.expand_dims(img, axis=0)
-            print(input_img)
-            print(input_img.shape)
-            i = input_img.reshape(-1,1)
-            print("shape-i",i.shape)
-            # result = model.predict_classes(input_img)
-            result = model.predict(input_img)
-            print(result)
-            # st.write(result)
+
             st.subheader('The report is..')
             print(result)
             
